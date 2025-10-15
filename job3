@@ -6,18 +6,17 @@ pipeline {
             git branch: 'main', url: 'https://github.com/abhishekhg1749/firstdevopsrepo.git'
             }
         }
-
         stage('build'){
             steps{
             echo"building the application"
             } 
         }
-        stages('depoly'){
+        stage('depoly'){
             steps{
             echo"deploying the application"                
             }
         }
-        stages('test'){
+        stage('test'){
             steps{
             echo"testing the application"                
             }
