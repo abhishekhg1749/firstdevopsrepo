@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    stages{
+        stage('git checkout'){
+            steps{
+            git branch: 'main', url: 'https://github.com/abhishekhg1749/firstdevopsrepo.git'
+            }
+        }
+
+        stage('build'){
+            steps{
+            echo"building the application"
+            } 
+        }
+        stages('depoly'){
+            steps{
+            echo"deploying the application"                
+            }
+        }
+        stages('test'){
+            steps{
+            echo"testing the application"                
+            }
+        }
+    }
+}
