@@ -13,7 +13,7 @@ pipeline {
     
         stage('maven clean'){
             steps{
-            sh 'mvn clean'
+            sh 'mvn clean '
         }
 
         }
@@ -21,16 +21,6 @@ pipeline {
             steps{
             sh 'mvn clean install'
             } 
-        }
-        stage('depoly'){
-            steps{
-            echo"deploying the application"                
-            }
-        }
-        stage('test'){
-            steps{
-            echo"testing the application"                
-            }
         }
     }
 }
